@@ -6,22 +6,25 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
     <body>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 border">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="container">
                     <ul class="nav">
-                        <li class="navbar-text">
-                            Grundkurs Symfony
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href=" {{ path('homepage') }}" aria-haspopup="false" aria-expanded="false"><img src="{{ asset('build/2aufKANTE_logo.png') }}" style="width: 200px; height: 30px;"></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href=" {{ path('homepage') }}" aria-haspopup="false" aria-expanded="false"><img src="{{ asset('build/2aufKANTE_logo.png') }}"></a>
+                            <a class="nav-link" href=" {{ path('fos_user_security_logout') }}" aria-haspopup="false" aria-expanded="true">Logout</a>
                         </li>
                         {#<li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New contacts</a>
@@ -69,7 +72,6 @@
         </nav>
         <div class="container">
             {% block body %}{% endblock %}
-            {% block javascripts %}{% endblock %}
         </div>
     </body>
 </html>
