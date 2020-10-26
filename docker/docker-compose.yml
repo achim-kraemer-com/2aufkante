@@ -3,7 +3,7 @@ services:
     db:
         image: mysql:5.7.22
         ports:
-            - "3307:3306"
+            - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: symfony
@@ -12,8 +12,10 @@ services:
         volumes:
           - ./data/db:/var/lib/mysql
     php:
-        build: php-fpm/7.2
+        build: php-fpm/7.4
+        container_name: 2aufKante
         ports:
+            - "9000:9000"
             - "9999:9999"
         volumes:
             - ../application:/var/www/symfony:cached

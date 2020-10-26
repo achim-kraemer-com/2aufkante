@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-LABEL maintainer="Achim Kraemer <a.kraemer@basecom.de>"
+LABEL maintainer="Achim Kraemer <a.kraemer@mso-digital.de>"
 
 ADD nginx.conf /etc/nginx/
 ADD symfony.conf /etc/nginx/conf.d/

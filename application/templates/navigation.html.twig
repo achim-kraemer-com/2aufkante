@@ -1,0 +1,26 @@
+<nav>
+    <div class="social-media-links">
+        <a class="social-media-link mr-2" href="https://www.facebook.com/2aufKante/" title="Facebook" target="_blank"><i class="fab fa-facebook-f social-media-icon"></i></a>
+        <a class="social-media-link mr-2" href="https://www.instagram.com/2aufkante" title="Instagram" target="_blank"><i class="fab fa-instagram social-media-icon"></i></a>
+        <a class="social-media-link" href="https://www.youtube.com/channel/UCEhsAP9TcRCjJI1vWYe4lcw/featured" title="YoutTube" target="_blank"><i class="fab fa-youtube social-media-icon"></i></a>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <a class="nav-link custom-navigation-title" href=" {{ path('homepage') }}" aria-haspopup="false" aria-expanded="false">
+        <img class="custom-navigation-image" src="{{ asset('build/images/2aufKANTE_logo.png') }}">
+    </a>
+    <ul class="nav-links">
+        <li class="nav-item dropdown custom-navigation-link">
+            <a class="nav-link custom-navigation-text text-uppercase" href="{{ path('messages_index') }}">Neues</a>
+        </li>
+        <li class="nav-item dropdown custom-navigation-link">
+            <a class="nav-link custom-navigation-text text-uppercase" href="{{ path('live_index') }}">Live</a>
+        </li>
+        <li class="nav-item dropdown custom-navigation-link">
+            <a class="nav-link custom-navigation-text text-uppercase" href="{{ path('band') }}">Band</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Live{% endblock %}
+
+{% block body %}
+    <div class="form-group">
+        <div class="p-5">
+            <h1>Live</h1>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ live.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>EventDate</th>
+                        <td>{{ live.eventDate ? live.eventDate|date('d.m.Y H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Place</th>
+                        <td>{{ live.place }}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>{{ live.description }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="{{ path('live_index') }}">back to list</a>
+
+            <a href="{{ path('live_edit', {'id': live.id}) }}">edit</a>
+
+            {{ include('live/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

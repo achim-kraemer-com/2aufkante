@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Neuigkeiten{% endblock %}
+
+{% block body %}
+<div class="form-group">
+    <div class="p-5 message">
+        <h1 class="mb-3 category-title">Neuigkeiten</h1>
+        {% for message in messages %}
+            <h2 class="message-title">{{ message.updatedAt ? message.updatedAt|date('d.m.Y') : '' }} - {{ message.title }}</h2>
+            <div class="message-text">{{ message.text }}</div>
+        {% else %}
+            <h2 class="message-title">Zur Zeit gibt es keine neuen Neuigkeiten</h2>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

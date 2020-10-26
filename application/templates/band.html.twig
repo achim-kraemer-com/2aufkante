@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Band{% endblock %}
+
+{% block body %}
+<div class="form-group">
+    <div class="p-5 message">
+        <h1 class="mb-3 category-title">Band</h1>
+        <div class="row">
+            <div class="col-6">
+                <h2 class="message-title">Akim the Dream</h2>
+                <div class="message-text">Gitarre und Gesang</div>
+            </div>
+            <div class="col-6">
+                <img width="50%" src="{{ asset('build/images/band-fotos/akim.jpg') }}">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <h2 class="message-title">Silent Fusch</h2>
+                <div class="message-text">Schlagzeug und Gesang</div>
+            </div>
+            <div class="col-6">
+                <img width="50%" src="{{ asset('build/images/band-fotos/fusch.jpg') }}">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <h2 class="message-title">Brandy</h2>
+                <div class="message-text">Bass und Gesang</div>
+            </div>
+            <div class="col-6">
+                <img width="50%" src="{{ asset('build/images/band-fotos/brandy.jpg') }}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

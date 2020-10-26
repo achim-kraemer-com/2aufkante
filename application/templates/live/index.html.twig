@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Live index{% endblock %}
+
+{% block body %}
+<div class="form-group">
+    <div class="p-5 message">
+        <h1 class="mb-3 category-title">Live</h1>
+        {% for live in lives %}
+            {% set messagePast = '' %}
+            {% if live.eventDate < date('now') %}
+                {% set messagePast = 'message-past' %}
+            {% endif %}
+            <h2 class="message-title {{ messagePast }}">{{ live.eventDate ? live.eventDate|date('d.m.Y') : '' }} - {{ live.place }}</h2>
+            <div class="message-text {{ messagePast }}">{{ live.description }}</div>
+        {% else %}
+            <h2 class="message-title">Es stehen leider keine Auftritt in Zukunft an.</h2>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
