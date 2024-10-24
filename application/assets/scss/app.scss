@@ -222,13 +222,13 @@ nav {
         background-color: #ffffff;
         flex-direction: column;
         justify-content: space-around;
-        clip-path: circle(100px at 90% -10%);
-        -webkit-cli-path: circle(100px at 90% -10%);
+        clip-path: circle(100px at 90% -20%);
+        -webkit-cli-path: circle(100px at 90% -20%);
         transition: all 1s ease-out;
     }
     .nav-links.open {
-        clip-path: circle(1320px at 90% -10%);
-        -webkit-cli-path: circle(1320px at 90% -10%);
+        clip-path: circle(1320px at 90% -20%);
+        -webkit-cli-path: circle(1320px at 90% -20%);
     }
 }
 
